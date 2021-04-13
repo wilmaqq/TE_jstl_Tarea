@@ -47,7 +47,7 @@ public class Controller extends HttpServlet {
             request.setAttribute("miTarea", objTarea);
             request.getRequestDispatcher("editar.jsp").forward(request, response);
         }
-        if(op.equals("Eliminar")){
+        if(op.equals("eliminar")){
             id = Integer.parseInt(request.getParameter("id"));
             HttpSession ses = request.getSession();
             GestorTareas agenda = (GestorTareas) ses.getAttribute("agenda");
